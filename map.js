@@ -66,21 +66,21 @@ doIT = () => {
       heldAddresses[data[address].id] = data[address];
     }
   });
-  setInterval(() => {
-    getFormatted().then(data => {
-      getEverything().then(addresses => {
-        addressesLength = Object.keys(addresses).length;
-        if (addressesLength != Object.keys(data).length) {
-          for (id in addresses) {
-            if (heldAddresses[id] === undefined && go) {
-              addNewMarker(id, addresses);
-              go = false;
-            }
+  // setInterval(() => {
+  getFormatted().then(data => {
+    getEverything().then(addresses => {
+      addressesLength = Object.keys(addresses).length;
+      if (addressesLength != Object.keys(data).length) {
+        for (id in addresses) {
+          if (heldAddresses[id] === undefined && go) {
+            addNewMarker(id, addresses);
+            go = false;
           }
         }
-      });
+      }
     });
-  }, 2000);
+  });
+  // }, 2000);
 };
 
 async function getEverything() {
