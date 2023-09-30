@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cellistalentpath/flood_map.git"
+    "url": "git+https://github.com/V1perW0lf/flood-map.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/cellistalentpath/flood_map/issues"
+    "url": "https://github.com/V1perW0lf/flood-map/issues"
   },
-  "homepage": "https://github.com/cellistalentpath/flood_map#readme",
+  "homepage": "https://github.com/V1perW0lf/flood-map#readme",
   "devDependencies": {
     "jest": "^24.9.0",
     "jest-fetch-mock": "^2.1.2"
