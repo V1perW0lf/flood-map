@@ -1,7 +1,7 @@
 // Initialize and add the map
 let map;
 var geoC;
-const url = "https://flood-map42-94dcc2ab6278.herokuapp.com"; //https://flood-map42.herokuapp.com
+const url = "https://flood-map42-94dcc2ab6278.herokuapp.com";
 let heldAddresses = {};
 let markerArray = [];
 let infoWindowArray = [];
@@ -29,16 +29,6 @@ function initMap() {
             center: results[0].geometry.location,
             styles: styles
           });
-          // let comp_logo = {
-          //   url: "./tp-logo.png",
-          //   scaledSize: new google.maps.Size(40, 40)
-          // };
-          // let marker = new google.maps.Marker({
-          //   map: map,
-          //   position: results[0].geometry.location,
-          //   icon: comp_logo,
-          //   animation: google.maps.Animation.NONE
-          // });
         } else {
           console.log("This didnt work" + status);
         }
@@ -66,7 +56,6 @@ doIT = () => {
       heldAddresses[data[address].id] = data[address];
     }
   });
-  // setInterval(() => {
   getFormatted().then(data => {
     getEverything().then(addresses => {
       addressesLength = Object.keys(addresses).length;
@@ -80,7 +69,6 @@ doIT = () => {
       }
     });
   });
-  // }, 2000);
 };
 
 async function getEverything() {
